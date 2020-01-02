@@ -2,8 +2,8 @@
 \noindent
 \textbf{
 	\textit{
-        توضیح نحوهٔ کار فشرده‌سازی در فرمت JPEG، 
-        مقدمه‌ای بر DCT و 
+        توضیح نحوهٔ کار فشرده‌سازی در فرمت \lr{JPEG}، 
+        مقدمه‌ای بر \lr{DCT} و 
         توضیح کلی 
         \lr{Huffman encoding}
 	}
@@ -309,3 +309,33 @@ a
 زیرمجموعهٔ حرف 
 b
 است. 
+
+کلیت الگوریتم Huffman پیدا کردن بهترین کدگذاری برای هر حرف در رشتهٔ اصلی 
+است که طول رشتهٔ نهایی کم‌ترین اندازه را داشته باشد، برای این کار از شبه کد زیر استفاده می‌شود.
+\vspace{5mm}
+
+\begin{code}
+//Huffman Algorithm
+n := |C|;
+Q := C;
+for i := 1 to n − 1 do
+        allocate a new node z
+        z.lef t := x := Extract-Min(Q);
+        z.right := y := Extract-Min(Q);
+        z.freq := x.freq + y.freq;
+        Insert(Q, z);
+end for
+return Extract-Min(Q); {return the root of the tree}
+\end{code}
+\vspace{5mm}
+شکل 
+\ref{huffman_tree}
+مراحل الگوریتم Huffman را نشان می‌دهد.
+
+\begin{figure}[]
+        \centering
+        \includegraphics[width=\textwidth]{figs/huffamn_tree.png}
+        \caption{مراحل الگوریتم Huffman}
+        \label{huffman_tree}
+\end{figure}
+
