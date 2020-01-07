@@ -2,7 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,margin=3cm,top=2cm]{geometry}
 \usepackage{graphicx}
-\usepackage[nottoc,numbib]{tocbibind}
 % graphics
 \usepackage{tikz}
 \usepackage{hyperref}
@@ -17,6 +16,7 @@
 \usepackage{caption,subcaption}
 \usepackage{fontawesome}
 \usepackage{setspace}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
 %listings
 \usepackage{xcolor}
 \usepackage{listings}
@@ -66,7 +66,7 @@
 \fancyhead[RE,LO]{بررسی الگوریتم‌های فشرده‌سازی و کاربردهای آن‌ها}
 \fancyfoot[LE,RO]{\thepage}
 
-\onehalfspacing
+% \onehalfspacing
 % persian
 \usepackage[extrafootnotefeatures,localise]{xepersian}
 \settextfont[
@@ -74,7 +74,7 @@ Scale = 1.2]{XB Zar}
 \setlatintextfont[Scale=1.2,
  BoldFont={LiberationSerif-Bold.ttf}, 
  ItalicFont={LiberationSerif-Italic.ttf}]{LiberationSerif-Regular.ttf}
- 
+ \renewcommand{\baselinestretch}{1.5} 
 \pagenumbering{roman}
 \begin{document}
 
@@ -85,6 +85,7 @@ Scale = 1.2]{XB Zar}
 \tableofcontents
 \listoffigures
 \listoftables
+\cleardoublepage
 \input{Introduction.tex}
 \input{JPEG.tex}
 \input{AAC.tex}

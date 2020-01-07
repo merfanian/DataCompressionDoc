@@ -31,7 +31,7 @@
 
  فرمول کلی DCT 
  برای فضای یک‌بعدی به شکل زیر است.
-
+\cite{dct}
  \begin{equation}
  X_k = \sum_{n = 0}^{N - 1} x_n \cos [\pi / n  (n + 1/2)k]
  , k = 0, ..., N - 1
@@ -65,7 +65,7 @@ DCT برای ما انجام می‌دهد.
         \centering
         \includegraphics[width=\textwidth]{figs/freq_1.png}
         \caption{توصیف فرکانسی توابع 
-        $\cos (x) , \cos (2x)$ }
+        $\cos (x) , \cos (2x)$ \cite{youtube}}
         \label{freq_1}
 \end{figure}
 
@@ -73,7 +73,7 @@ DCT برای ما انجام می‌دهد.
         \centering
         \includegraphics[width=0.5\textwidth]{figs/freq_2.png}
         \caption{توصیف فرکانسی تابع 
-        $\cos (x) + \cos (2x)$}
+        $\cos (x) + \cos (2x) / 2$ \cite{youtube}}
         \label{freq_2}
 \end{figure}
 
@@ -89,9 +89,16 @@ DCT برای ما انجام می‌دهد.
 \end{itemize}
 
 \section{یک مثال از فشرده‌سازی JPEG}
-برای درک بهتر مراحل گفته شده تلاش می‌کنیم تا ماتریس زیر را (که در حقیقت می‌تواند 
-یک کانال رنگی از قسمتی از یک تصویر باشد) را با الگوریتم‌های گفته‌شده فشرده‌سازی کنیم.
-
+برای درک بهتر مراحل گفته شده تلاش می‌کنیم تا ماتریس زیر را - که تصویر کانال خاکستری آن را در شکل 
+\ref{jpeg_example}
+مشاهده می‌شود -
+را با الگوریتم‌های گفته‌شده فشرده‌سازی کنیم.
+\begin{figure}[]
+        \centering
+        \includegraphics[width=0.5\textwidth]{figs/jpeg_block.png}
+        \caption{نمونهٔ تصویر برای فشرده‌سازی \cite{jpeg_example}}
+        \label{jpeg_example}
+\end{figure}
 \[
         M = \begin{bmatrix}
                 52 & 55 & 61 & 66 & 70 & 61 & 64 & 73\\
@@ -150,7 +157,7 @@ DCT به فضای فرکانس می‌بریم
 \begin{figure}[]
         \centering
         \includegraphics[]{figs/freq_3.png}
-        \caption{ماتریس فرکانس‌های استاندارد}
+        \caption{ماتریس فرکانس‌های استاندارد \cite{standard_freqs}}
         \label{freq_3}
 \end{figure}
 
@@ -312,6 +319,7 @@ b
 
 کلیت الگوریتم Huffman پیدا کردن بهترین کدگذاری برای هر حرف در رشتهٔ اصلی 
 است که طول رشتهٔ نهایی کم‌ترین اندازه را داشته باشد، برای این کار از شبه کد زیر استفاده می‌شود.
+\cite{huffman}
 \vspace{5mm}
 
 \begin{code}
@@ -335,7 +343,7 @@ return Extract-Min(Q); {return the root of the tree}
 \begin{figure}[]
         \centering
         \includegraphics[width=\textwidth]{figs/huffamn_tree.png}
-        \caption{مراحل الگوریتم Huffman}
+        \caption{مراحل الگوریتم Huffman \cite{huffman_tree}}
         \label{huffman_tree}
 \end{figure}
 
