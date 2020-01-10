@@ -16,6 +16,7 @@
 \usepackage{caption,subcaption}
 \usepackage{fontawesome}
 \usepackage{setspace}
+\usepackage{blindtext}
 \usepackage[nottoc, notlof, notlot]{tocbibind}
 %listings
 \usepackage{xcolor}
@@ -57,7 +58,7 @@
 \lstnewenvironment{ccode}{\lstset{style=C}\latin}{\endlatin}
 
 \newcommand{\co}[1]{\lr{\lstset{style=verilog}\lstinline{#1}}}
-
+\newcommand{\efn}[1]{\LTRfootnote{ #1}}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -66,7 +67,7 @@
 \fancyhead[RE,LO]{بررسی الگوریتم‌های فشرده‌سازی و کاربردهای آن‌ها}
 \fancyfoot[LE,RO]{\thepage}
 
-% \onehalfspacing
+\onehalfspacing
 % persian
 \usepackage[extrafootnotefeatures,localise]{xepersian}
 \settextfont[
@@ -76,6 +77,8 @@ Scale = 1.2]{XB Zar}
  ItalicFont={LiberationSerif-Italic.ttf}]{LiberationSerif-Regular.ttf}
  \renewcommand{\baselinestretch}{1.5} 
 \pagenumbering{roman}
+\setdigitfont{XB Yas}
+
 \begin{document}
 
 \begin{titlepage}
