@@ -36,10 +36,10 @@
 بدفهمی متن اصلی گردد. الگوریتم‌های مشهور فشرده‌سازی بدون هدررفت داده به شرح زیر اند \cite{data_types}.
 
 \begin{itemize}
-	\item فشرشده‌سازی طول متن \efn{\lr{Run-Length Enconding (RLE)}}
+	\item کدبندی طول اجرا\efn{\lr{Run-Length Enconding (RLE)}}
 	\item فشرده‌سازی LZ\efn{\lr{Lempel-Ziv (LZ)}}
-	\item کدگذاری هافمن \efn{\lr{Huffman Encoding}}
-	\item تبدیل باروس-ویلر \efn{\lr{Burrows Wheeler Transform}}
+	\item کدگذاری هافمن\efn{\lr{Huffman Encoding}}
+	\item تبدیل باروس-ویلر\efn{\lr{Burrows Wheeler Transform}}
 \end{itemize}
 
 البته لازم به ذکر است که در عمل از مجموعه‌ای از الگوریتم‌های فوق برای رسیدن به درصد مطلوب فشرده‌سازی استفاده می‌شود.
@@ -73,14 +73,14 @@ ZIP
 	
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{figs/compressed.png}
 	\caption[شکل نمونه برای تست میزان کمپرس در فرمت PNG ]{شکل نمونه برای تست میزان کمپرس در فرمت PNG \cite{my_picture}}
 	\label{example_1}
 \end{figure}
 
-\begin{table}
+\begin{table}[H]
 	\centering
 	\caption{حجم فایل نمونه در فرمت PNG }
 	\label{compare_1}
@@ -90,7 +90,7 @@ ZIP
 	7.7 مگابایت & BMP \\
 	98 کیلوبایت & PNG \\ \bottomrule
 	\end{tabular}
-	\end{table}
+\end{table}
 
 
 
@@ -110,7 +110,7 @@ ZIP
 \subsubsection{نمونه‌های الگوریتم‌های با هدررفت داده}
 الگوریتم‌های با هدررفت داده با همه‌گیر شدن اینترنت و اشتراک‌گذاری 
 بیشتر مدیا در فضای اینترنت بسیار گسترده شدند، از این رو اکثر این الگوریتم‌ها برای فشرده‌سازی فایل‌های صوتی-تصویری یا به اصطلاح 
-مدیا  \efn{Media}
+مدیا\efn{Media}
 استفاده می‌شوند. فرمت‌های زیر همگی در بطن خود از الگوریتم‌های با هدررفت داده برای فشرده‌سازی مدیا استفاده می‌کنند.
 
 \begin{itemize}
